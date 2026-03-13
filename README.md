@@ -1,151 +1,144 @@
-# Prediksi Harga Rumah dengan Machine Learning
+# 🏠 Prediksi Harga Rumah dengan Machine Learning
 
-## Deskripsi Proyek
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![XGBoost](https://img.shields.io/badge/XGBoost-Regression-green)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
-Proyek ini merupakan implementasi Machine Learning untuk memprediksi
-**harga rumah** menggunakan *California Housing Dataset*.\
-Tujuan utama proyek ini adalah membangun model yang dapat memperkirakan
-harga rumah secara lebih akurat berdasarkan karakteristik wilayah dan
-kondisi ekonomi.
+---
 
-------------------------------------------------------------------------
+## 📌 Deskripsi Proyek
 
-# Dataset
+Proyek ini merupakan implementasi **Machine Learning** untuk memprediksi harga rumah menggunakan **California Housing Dataset**.
 
-Dataset yang digunakan adalah **California Housing Dataset** yang berisi
-informasi geografis dan demografi wilayah perumahan.
+Model dikembangkan untuk membantu menentukan harga rumah secara **lebih akurat dan berbasis data**.
+
+---
+
+# 📊 Dataset
+
+Dataset yang digunakan adalah **California Housing Dataset** yang berisi informasi geografis dan demografi wilayah perumahan.
 
 ### Fitur yang digunakan
 
--   longitude
--   latitude
--   housing_median_age
--   total_rooms
--   total_bedrooms
--   population
--   households
--   median_income
--   ocean_proximity
+- 🌍 longitude
+- 🌍 latitude
+- 🏠 housing_median_age
+- 🏢 total_rooms
+- 🛏 total_bedrooms
+- 👨‍👩‍👧 population
+- 🏘 households
+- 💰 median_income
+- 🌊 ocean_proximity
 
-### Target Prediksi
+### 🎯 Target Prediksi
 
-    median_house_value
 
-Target tersebut merepresentasikan **harga median rumah** pada suatu
-wilayah di California.
 
-------------------------------------------------------------------------
+Target tersebut merepresentasikan **harga median rumah** pada suatu wilayah di California.
 
-# Tahapan Proyek Data Science
+---
 
-Tahapan yang dilakukan dalam proyek ini meliputi:
+# ⚙️ Tahapan Proyek Data Science
 
-1.  **Data Understanding**
-    -   Memahami struktur dataset
-    -   Mengidentifikasi tipe data dan variabel penting
-2.  **Data Cleaning**
-    -   Menangani missing values
-    -   Menghapus atau memperbaiki data yang tidak valid
-3.  **Exploratory Data Analysis (EDA)**
-    -   Analisis distribusi data
-    -   Analisis korelasi antar fitur
-    -   Visualisasi hubungan antar variabel
-4.  **Feature Engineering**
-    -   Encoding variabel kategorikal (`ocean_proximity`)
-    -   Normalisasi atau standarisasi fitur numerik
-5.  **Model Training**
-    -   Melatih beberapa algoritma machine learning
-6.  **Model Evaluation**
-    -   Mengukur performa model menggunakan metrik evaluasi
-7.  **Model Selection**
-    -   Memilih model dengan performa terbaik
+Tahapan yang dilakukan dalam proyek ini:
 
-------------------------------------------------------------------------
+1️⃣ Data Understanding  
+2️⃣ Data Cleaning  
+3️⃣ Exploratory Data Analysis (EDA)  
+4️⃣ Feature Engineering  
+5️⃣ Model Training  
+6️⃣ Model Evaluation  
+7️⃣ Model Selection  
 
-# Algoritma Machine Learning yang Digunakan
+---
+
+# 🤖 Algoritma Machine Learning
 
 Model yang diuji dalam proyek ini:
 
--   Linear Regression
--   K-Nearest Neighbors Regressor
--   Decision Tree Regressor
--   Random Forest Regressor
--   XGBoost Regressor
+- 📈 Linear Regression
+- 🔍 K-Nearest Neighbors Regressor
+- 🌳 Decision Tree Regressor
+- 🌲 Random Forest Regressor
+- 🚀 XGBoost Regressor
 
-------------------------------------------------------------------------
+---
 
-# Evaluasi Model
+# 📉 Evaluasi Model
 
-Model dievaluasi menggunakan metrik berikut:
+Model dievaluasi menggunakan:
 
--   **MAE (Mean Absolute Error)**
--   **MAPE (Mean Absolute Percentage Error)**
+- **MAE (Mean Absolute Error)**
+- **MAPE (Mean Absolute Percentage Error)**
 
-  Model               MAE         MAPE
-  ------------------- ----------- -----------
-  Linear Regression   42984       0.267
-  KNN                 36684       0.211
-  Decision Tree       42409       0.251
-  Random Forest       30915       0.184
-  XGBoost             **29607**   **0.177**
+| Model | MAE | MAPE |
+|------|------|------|
+| Linear Regression | 42984 | 0.267 |
+| KNN | 36684 | 0.211 |
+| Decision Tree | 42409 | 0.251 |
+| Random Forest | 30915 | 0.184 |
+| XGBoost | **29607** | **0.177** |
 
-Dari hasil evaluasi tersebut, **XGBoost** memberikan performa terbaik
-dibandingkan model lainnya.
+🏆 **XGBoost memberikan performa terbaik.**
 
-------------------------------------------------------------------------
+---
 
-# Model Terbaik
+# 🏆 Model Terbaik
 
-Model terbaik setelah proses tuning adalah:
+Model terbaik setelah tuning adalah:
 
 **XGBoost Regressor**
 
 Hasil evaluasi:
 
--   **MAE ≈ 28,293 USD**
--   **MAPE ≈ 16%**
+- **MAE ≈ 28,293 USD**
+- **MAPE ≈ 16%**
 
-Artinya rata-rata selisih antara prediksi harga rumah dengan harga
-sebenarnya sekitar **28 ribu USD**.
+Artinya rata-rata selisih antara prediksi harga rumah dan harga sebenarnya sekitar **28 ribu USD**.
 
-------------------------------------------------------------------------
+---
 
-# Insight Penting dari Data
+# 🔎 Insight Penting
 
-Beberapa fitur yang paling berpengaruh terhadap harga rumah:
+Fitur paling berpengaruh terhadap harga rumah:
 
--   **median_income**
--   **ocean_proximity**
+- 💰 **median_income**
+- 🌊 **ocean_proximity**
 
-Hal ini menunjukkan bahwa **kondisi ekonomi wilayah dan kedekatan dengan
-pantai** memiliki pengaruh besar terhadap nilai properti.
+Hal ini menunjukkan bahwa **kondisi ekonomi wilayah dan kedekatan dengan pantai sangat mempengaruhi harga properti**.
 
-------------------------------------------------------------------------
+---
 
-# Manfaat Bisnis
+# 💼 Manfaat Bisnis
 
-Model prediksi ini dapat digunakan untuk:
+Model ini dapat membantu:
 
--   Menentukan harga rumah secara lebih akurat
--   Menghindari overpricing atau underpricing
--   Membantu agen properti dalam menentukan harga jual
--   Memberikan rekomendasi harga berbasis data
+- 📊 Menentukan harga rumah lebih akurat
+- 📉 Menghindari overpricing atau underpricing
+- 🏠 Membantu agen properti menentukan harga jual
+- 📈 Memberikan rekomendasi harga berbasis data
 
-------------------------------------------------------------------------
+---
 
-# Teknologi yang Digunakan
+# 🛠 Teknologi yang Digunakan
 
--   Python
--   Pandas
--   NumPy
--   Scikit-Learn
--   XGBoost
--   Matplotlib
--   Seaborn
+| Tools | Keterangan |
+|------|------|
+| 🐍 Python | Bahasa pemrograman utama |
+| 📊 Pandas | Data manipulation |
+| 🔢 NumPy | Numerical computing |
+| 🤖 Scikit-Learn | Machine learning library |
+| 🚀 XGBoost | Boosting algorithm |
+| 📈 Matplotlib | Visualisasi data |
+| 📊 Seaborn | Statistical visualization |
 
-------------------------------------------------------------------------
+---
 
-# Author
+# 👨‍💻 Author
 
-**Muhammad Alfarisy**\
-Ujian Sertifikasi BNSP Data Science
+**Muhammad Alfarisy**  
+Ujian Sertifikasi **BNSP Data Science**
+
+📌 GitHub  
+https://github.com/mhdalfarisy
