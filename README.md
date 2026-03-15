@@ -1,4 +1,5 @@
-# 🏠 Prediksi Harga Rumah dengan Machine Learning
+# 🏠 House Price Prediction using Machine Learning
+**BNSP Data Science Certification Project**
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
@@ -7,138 +8,105 @@
 
 ---
 
-## 📌 Deskripsi Proyek
-
-Proyek ini merupakan implementasi **Machine Learning** untuk memprediksi harga rumah menggunakan **California Housing Dataset**.
-
-Model dikembangkan untuk membantu menentukan harga rumah secara **lebih akurat dan berbasis data**.
+## 📊 Project Preview
+![California House Price Prediction](https://raw.githubusercontent.com/mhdalfarisy/mhdalfarisy.github.io/main/src/assets/images/california_predict_house.png)
 
 ---
 
-# 📊 Dataset
-
-Dataset yang digunakan adalah **California Housing Dataset** yang berisi informasi geografis dan demografi wilayah perumahan.
-
-### Fitur yang digunakan
-
-- 🌍 longitude
-- 🌍 latitude
-- 🏠 housing_median_age
-- 🏢 total_rooms
-- 🛏 total_bedrooms
-- 👨‍👩‍👧 population
-- 🏘 households
-- 💰 median_income
-- 🌊 ocean_proximity
-
-### 🎯 Target Prediksi
-
-
-
-Target tersebut merepresentasikan **harga median rumah** pada suatu wilayah di California.
+## 📌 Project Description
+This project implements **Machine Learning** to predict housing prices using the **California Housing Dataset**. The model was developed to provide a **data-driven approach** for accurately determining property values, minimizing human error in real estate appraisal.
 
 ---
 
-# ⚙️ Tahapan Proyek Data Science
+## 📊 Dataset Overview
+The dataset contains geographic and demographic information from various housing districts in California.
 
-Tahapan yang dilakukan dalam proyek ini:
+### Features Used:
+* 🌍 **Location:** `longitude`, `latitude`
+* 🏠 **Property Specs:** `housing_median_age`, `total_rooms`, `total_bedrooms`
+* 👨‍👩‍👧 **Demographics:** `population`, `households`, `median_income`
+* 🌊 **Proximity:** `ocean_proximity`
 
-1️⃣ Data Understanding  
-2️⃣ Data Cleaning  
-3️⃣ Exploratory Data Analysis (EDA)  
-4️⃣ Feature Engineering  
-5️⃣ Model Training  
-6️⃣ Model Evaluation  
-7️⃣ Model Selection  
-
----
-
-# 🤖 Algoritma Machine Learning
-
-Model yang diuji dalam proyek ini:
-
-- 📈 Linear Regression
-- 🔍 K-Nearest Neighbors Regressor
-- 🌳 Decision Tree Regressor
-- 🌲 Random Forest Regressor
-- 🚀 XGBoost Regressor
+### 🎯 Prediction Target
+The target variable is **`median_house_value`**, representing the median house price for a specific California district.
 
 ---
 
-# 📉 Evaluasi Model
+## ⚙️ Data Science Workflow
+The project follows a structured methodology:
+1.  **Data Understanding**
+2.  **Data Cleaning**
+3.  **Exploratory Data Analysis (EDA)**
+4.  **Feature Engineering**
+5.  **Model Training**
+6.  **Model Evaluation**
+7.  **Model Selection**
 
-Model dievaluasi menggunakan:
+---
 
-- **MAE (Mean Absolute Error)**
-- **MAPE (Mean Absolute Percentage Error)**
+## 🤖 Machine Learning Algorithms
+The following regression models were tested and compared:
+* 📈 Linear Regression
+* 🔍 K-Nearest Neighbors (KNN) Regressor
+* 🌳 Decision Tree Regressor
+* 🌲 Random Forest Regressor
+* 🚀 **XGBoost Regressor**
+
+---
+
+## 📉 Model Evaluation
+Evaluation was conducted using **MAE** (Mean Absolute Error) and **MAPE** (Mean Absolute Percentage Error):
 
 | Model | MAE | MAPE |
-|------|------|------|
-| Linear Regression | 42984 | 0.267 |
-| KNN | 36684 | 0.211 |
-| Decision Tree | 42409 | 0.251 |
-| Random Forest | 30915 | 0.184 |
-| XGBoost | **29607** | **0.177** |
+| :--- | :--- | :--- |
+| Linear Regression | 42,984 | 0.267 |
+| KNN | 36,684 | 0.211 |
+| Decision Tree | 42,409 | 0.251 |
+| Random Forest | 30,915 | 0.184 |
+| **XGBoost** | **29,607** | **0.177** |
 
-🏆 **XGBoost memberikan performa terbaik.**
-
----
-
-# 🏆 Model Terbaik
-
-Model terbaik setelah tuning adalah:
-
-**XGBoost Regressor**
-
-Hasil evaluasi:
-
-- **MAE ≈ 28,293 USD**
-- **MAPE ≈ 16%**
-
-Artinya rata-rata selisih antara prediksi harga rumah dan harga sebenarnya sekitar **28 ribu USD**.
+🏆 **XGBoost delivered the best overall performance.**
 
 ---
 
-# 🔎 Insight Penting
+## 🏆 Final Model Results
+After hyperparameter tuning, the final **XGBoost Regressor** achieved:
+* **MAE:** ≈ $28,293
+* **MAPE:** ≈ 16%
 
-Fitur paling berpengaruh terhadap harga rumah:
-
-- 💰 **median_income**
-- 🌊 **ocean_proximity**
-
-Hal ini menunjukkan bahwa **kondisi ekonomi wilayah dan kedekatan dengan pantai sangat mempengaruhi harga properti**.
+*Insight: On average, the model's predictions deviate by approximately $28k from the actual market price.*
 
 ---
 
-# 💼 Manfaat Bisnis
-
-Model ini dapat membantu:
-
-- 📊 Menentukan harga rumah lebih akurat
-- 📉 Menghindari overpricing atau underpricing
-- 🏠 Membantu agen properti menentukan harga jual
-- 📈 Memberikan rekomendasi harga berbasis data
+## 🔎 Key Insights
+Based on the analysis, the most influential features affecting house prices are:
+1.  💰 **Median Income:** The strongest predictor of property value.
+2.  🌊 **Ocean Proximity:** Locations near the coast significantly command higher premiums.
 
 ---
 
-# 🛠 Teknologi yang Digunakan
-
-| Tools | Keterangan |
-|------|------|
-| 🐍 Python | Bahasa pemrograman utama |
-| 📊 Pandas | Data manipulation |
-| 🔢 NumPy | Numerical computing |
-| 🤖 Scikit-Learn | Machine learning library |
-| 🚀 XGBoost | Boosting algorithm |
-| 📈 Matplotlib | Visualisasi data |
-| 📊 Seaborn | Statistical visualization |
+## 💼 Business Benefits
+Implementing this predictive model provides several advantages:
+* **Accuracy:** More precise property valuation.
+* **Risk Mitigation:** Avoiding overpricing or underpricing in the market.
+* **Efficiency:** Helping real estate agents set data-backed listing prices.
+* **Strategic Decisions:** Providing data-driven recommendations for investors.
 
 ---
 
-# 👨‍💻 Author
+## 🛠 Tech Stack
+| Tools | Description |
+| :--- | :--- |
+| **Python** | Primary Programming Language |
+| **Pandas / NumPy** | Data Manipulation & Computing |
+| **Scikit-Learn** | Machine Learning Framework |
+| **XGBoost** | Gradient Boosting Library |
+| **Matplotlib / Seaborn** | Data Visualization |
 
-**Muhammad Alfarisy**  
-Ujian Sertifikasi **BNSP Data Science**
+---
 
-📌 GitHub  
-https://github.com/mhdalfarisy
+## 👨‍💻 Author
+**Muhammad Alfarisy**
+*Certified Data Scientist - BNSP Certification Exam*
+
+📌 [GitHub Profile](https://github.com/mhdalfarisy)
